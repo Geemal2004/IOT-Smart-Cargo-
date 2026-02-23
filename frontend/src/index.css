@@ -1,0 +1,25 @@
+/* Tailwind base layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Leaflet CSS — required for map tiles and markers to render correctly */
+@import 'leaflet/dist/leaflet.css';
+
+/* Ensure the leaflet map container fills its parent */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  z-index: 0;
+}
+
+/* Recharts responsive container fix inside flex layouts */
+.recharts-responsive-container {
+  min-width: 0;
+}
+
+/* Custom scrollbar for alert feed */
+.alert-scroll::-webkit-scrollbar        { width: 4px; }
+.alert-scroll::-webkit-scrollbar-track  { background: #1f2937; }
+.alert-scroll::-webkit-scrollbar-thumb  { background: #ef4444; border-radius: 2px; }

@@ -7,10 +7,10 @@ from datetime import datetime
 
 # --- HiveMQ Cloud Configuration ---
 # Find these in your HiveMQ Cloud Console
-BROKER_ADDRESS = "YOUR_CLUSTER_URL.s2.eu.hivemq.cloud" 
+BROKER_ADDRESS = "08d68a0332ec419da59fbcf26b106e44.s1.eu.hivemq.cloud" 
 PORT = 8883 # Standard port for TLS/SSL
-USERNAME = "YOUR_USERNAME"
-PASSWORD = "YOUR_PASSWORD"
+USERNAME = "Potatoes"
+PASSWORD = "Potatoes123"
 TOPIC = "cargo/telemetry"
 
 # Timing Settings
@@ -29,7 +29,7 @@ client.on_connect = on_connect
 
 # --- Security Settings (Required for HiveMQ Cloud) ---
 client.username_pw_set(USERNAME, PASSWORD)
-client.tls_set(tls_version=ssl.PROTOCOL_TLS_VERSION) # Enables encryption
+client.tls_set() # Enables encryption with secure defaults 
 
 def generate_cargo_data():
     return {
